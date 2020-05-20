@@ -1,6 +1,7 @@
 #! /usr/bin/env python3
 
 # iptables -t nat -A PREROUTING -p tcp --dport 22 -j NFQUEUE --queue-num 1
+# sudo iptables -I OUTPUT -s 172.29.8.21 -p tcp --dport 22 -j NFQUEUE --queue-num 1
 from scapy.all import *
 from netfilterqueue import NetfilterQueue
 #conf.L3socket=L3RawSocket
